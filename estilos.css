@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'DancingScript';
+  src: url('DancingScript.otf');
+}
 body{
-margin: 0px;
-padding: 0px;
-line-height: 1.429;
-background: #02010a;
-font-family: Dancing Script;
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+}
+#contenido{
+  width: 900px;
+  margin: 0 auto;
 }
 #menu {
   width: 900px;
@@ -14,6 +19,25 @@ font-family: Dancing Script;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+@-webkit-keyframes mianimacion {
+  0%{
+		margin-top: 150%
+	}
+	60%{
+		margin-top: -5%
+	}
+	100%{
+		margin-top: 0%
+	}
+}
+#contenido header{
+  animation-name: mianimacion;
+	animation-duration: 2s;
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;
+	animation-delay: 1s;
+}
 header h1{
   margin: 0px;
   padding: 12px 0px 0px 15px;
@@ -21,6 +45,7 @@ header h1{
   position: top;
   color: white;
   text-shadow: 2px 0 #02010a;
+  font-family: 'Dancing Script', cursive;
 }
 header nav{
   background: #5b7989;
@@ -51,9 +76,6 @@ header nav{
   padding: 5px 1.5em;
   text-decoration: underline;
 }
-#contenido{
-  width: 900px
-}
  .contenedor1{
    width: 900px;
    margin: 0px;
@@ -72,48 +94,88 @@ header nav{
    background-color: #d5c75f;
    display: flex;
    flex-direction: row;
+   border: 1px;
  }
- img{
-   box-shadow: 2px #02010a;
+ .contenedor2 a{
+   color: inherit;
+ }
+ .contenedor1 img, .contenedor2 img{
+   -webkit-filter: drop-shadow(2px 2px 2px #02010a);
+   filter: drop-shadow(2px 2px 2px #02010a);
  }
  #imagen-central img{
-  width: 60%
+  width: 60%;
  }
- #imagen-secundaria1 img{
-  width: 100%
+ #paisajes img{
+  width: 100%;
+  transition: transform 1s;
  }
- #imagen-secundaria2 img{
-  width: 100%
+ #paisajes img:hover{
+  width: 100%;
+  border: 2px;
+  -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  transform: rotate(10deg);
  }
- #pie{
+ #retratos img{
+  width: 100%;
+  transition: transform 1s;
+ }
+ #retratos img:hover{
+  width: 100%;
+  border: 2px;
+  -webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  transform: translateX(20px) translateY(-5px);
+ }
+ .contenedor3{
    width: 900px;
    background: #c6d5c5;
    -moz-border-radius: 0 10px 10px 0;
    -webkit-border-radius:0 10px 10px 0;
    border-radius: 0px 0px 10px 10px;
+   display: flex;
+ 	 flex-flow: row wrap;
+
  }
- div [class*="pie"]{
-   min-width: 250px;
-   flex: 1 1 25%;
- }
+ .contenedor  {
+   box-sizing: border-box;
+   min-height: 600px;
+   min-width: 100px;
  }
  .pie-contacto{
-   display: flex;
-   flex-flow: column;
+   width: 25%;
    order: 1;
+   position: relative;
+   left: 5%;
+ }
+ .pie-contacto a{
+   color: black;
  }
  .pie-terminos{
-   display: flex;
-   flex-flow: column;
+   width: 25%;
    order: 2;
- }
- .pie-redes{
-   display: flex;
-   flex-flow: column;
-   order: 3;
+   position: relative;
+   left: 5%;
  }
  .pie-derechos{
-   display: flex;
-   flex-flow: column;
+   width: 20%;
    order: 4;
+   position: relative;
+   left: 0%;
+ }
+ .pie-redes{
+   width: 30%;
+   order: 3;
+   position: relative;
+   left: 5%;
+ }
+ .pie-redes img{
+   width: 100%;
+ }
+ .pie-redes table{
+   width: 100%;
+ }
+ .redes{
+   width: 10%;
  }
