@@ -9,49 +9,47 @@
   </head>
   <body>
     <div id="contenido">
-      <header id="menu">
+      <header id="encabezado">
         <h1>Comenzando con la Fotografía</h1>
-        <nav>
+        <nav id="menu">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Paisajes</a></li>
-            <li><a href="#">Retratos</a></li>
+            <li class="active"><a href="index.html">Inicio</a></li>
+            <li><a href="paisajes.html">Paisajes</a></li>
+            <li><a href="retratos.html">Retratos</a></li>
           </ul>
         </nav>
       </header>
-      <div class="contenedor1">
-        <div id="imagen-central">
-          <img src="imagenes/002.jpg" alt="fotografía">
-        </div>
+      <div id="contenedor1">
+        <img src="imagenes/002.jpg" alt="fotografía">
       </div>
-      <div class="contenedor2">
+      <div id="contenedor2">
         <figure id="paisajes">
           <img src="imagenes/003.jpg" alt="paisajes" >
-          <figcaption><strong><a href="#">Paisajes</a></strong></figcaption>
+          <figcaption><strong><a href="paisajes.html">Paisajes</a></strong></figcaption>
         </figure>
         <figure id="retratos">
           <img src="imagenes/001.jpg" alt="retratos">
-          <figcaption><strong><a href="#">Retratos</a></strong></figcaption>
+          <figcaption><strong><a href="retratos.html">Retratos</a></strong></figcaption>
         </figure>
       </div>
-    <footer>
-      <div class="contenedor3">
-        <div class="pie-contacto">
+      <footer>
+      <div id="contenedor3">
+        <article id="pie-contacto">
           <h1>Contacto</h1>
           <a href="mailto:mr.velasco11@gmail.com?subject=feedback"><strong>mr.velasco11@gmail.com</strong></a>
           <p><strong>Leona Vicario #115</strong></p>
           <p><strong>Teléfono: 317 102 1757</strong></p>
-        </div>
-        <div class="pie-terminos">
+        </article>
+        <article id="pie-terminos">
           <h1>Términos</h1>
           <p><strong>Conoce nuestros términos y condiciones...</strong></p>
-        </div>
-        <div class="pie-redes">
+        </article>
+        <article id="pie-redes">
           <h1>Redes Sociales</h1>
           <p><strong>Comparte en nuestras redes</strong></p>
           <table id="redes-sociales">
             <tr>
-              <td class="redes"><a href="https://www.facebook.com/" target="_blank"><img src="imagenes/f-icon.png" alt="facebook-icon"></a></td>
+              <td class="redes" id="ficon"><a href="https://www.facebook.com/" target="_blank"><img src="imagenes/f-icon.png" alt="facebook-icon"></a></td>
               <td><p><strong>Comenzando con la Fotografía</strong></p></td>
             </tr>
             <tr>
@@ -63,13 +61,13 @@
               <td><p><strong>Comenzando con la Fotografía</strong></p></td>
             </tr>
           </table>
-        </div>
-        <div class="pie-derechos">
+        </article>
+        <article id="pie-derechos">
           <h1>Derechos</h1>
-          <p><strong>María José Reyes <br>ⒸCopyright-2017</strong></p>
-        </div>
+          <p><strong>María José Reyes ⒸCopyright-2017</strong></p>
+        </article>
       </div>
-    </footer>
+      </footer>
     </div>
   </body>
 </html>
