@@ -10,15 +10,6 @@ body{
   width: 900px;
   margin: 0 auto;
 }
-#menu {
-  width: 900px;
-  margin: 0px;
-	padding: 0px;
-  background: #5b7989;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
 @-webkit-keyframes mianimacion {
   0%{
 		margin-top: 150%
@@ -38,55 +29,66 @@ body{
 	-o-animation-delay:1s;
 	animation-delay: 1s;
 }
-header h1{
+div [id*="encabezado"]{
+  flex: 50%;
+}
+#encabezado{
+  width: 900px;
   margin: 0px;
-  padding: 12px 0px 0px 15px;
-  text-align: left;
-  position: top;
+  padding: 0px auto;
+  display: flex;
+  flex-direction: row;
+  background: #5b7989;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+#encabezado h1{
+  width: 100%;
+  padding: 0px 30px;
   color: white;
   text-shadow: 2px 0 #02010a;
   font-family: 'Dancing Script', cursive;
 }
-header nav{
-  background: #5b7989;
-  font-size: 1.143em;
-  height: 100%;
-  margin: 0px
-  padding: 0;
+#contenido nav{
+  width: 100%;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+}
+#contenido nav ul{
   text-align: right;
-  width: 900px;
+  padding: 10px 30px;
 }
-#menu nav ul{
+#contenido nav li{
   list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  height: 100%;
-}
-#menu nav li{
   text-decoration: none;
   display: inline;
-  margin: 0px 5px;
-  padding: 15px 0px;
-  height: 100%;
 }
-#menu nav a:link, #menu nav a:visited {
+#contenido nav a:link, #contenido nav a:visited {
   color: white;
   display: inline-block;
-  height: 20px;
-  padding: 5px 1.5em;
   text-decoration: underline;
 }
- .contenedor1{
+#contenido nav .active a:link, #banner nav .active a:visited{
+  text-decoration: none;
+}
+ #contenedor1{
    width: 900px;
    margin: 0px;
    padding: 20px 0px 20px 0px;
    text-align: center;
    background-color: #82c3a6;
  }
- div [class*="contenedor"]{
-   flex-basis: 50%;
+ #contenedor1 img, #contenedor2 img{
+   -webkit-filter: drop-shadow(2px 2px 2px #02010a);
+   filter: drop-shadow(2px 2px 2px #02010a);
+   width: 60%;
  }
- .contenedor2{
+ div [id*="contenedor"]{
+   flex: 50%;
+ }
+ #contenedor2{
    width: 900px;
    margin: 0px;
    padding: 20px 0px 20px 0px;
@@ -96,15 +98,8 @@ header nav{
    flex-direction: row;
    border: 1px;
  }
- .contenedor2 a{
+ #contenedor2 a{
    color: inherit;
- }
- .contenedor1 img, .contenedor2 img{
-   -webkit-filter: drop-shadow(2px 2px 2px #02010a);
-   filter: drop-shadow(2px 2px 2px #02010a);
- }
- #imagen-central img{
-  width: 60%;
  }
  #paisajes img{
   width: 100%;
@@ -128,54 +123,122 @@ header nav{
   filter: drop-shadow(2px 2px 2px #82c3a6);
   transform: translateX(20px) translateY(-5px);
  }
- .contenedor3{
+ #contenedor3{
    width: 900px;
    background: #c6d5c5;
-   -moz-border-radius: 0 10px 10px 0;
-   -webkit-border-radius:0 10px 10px 0;
+   -moz-border-radius: 0px 0px 10px 10px;
+   -webkit-border-radius:0px 0px 10px 10px;
    border-radius: 0px 0px 10px 10px;
    display: flex;
  	 flex-flow: row wrap;
-
  }
- .contenedor  {
-   box-sizing: border-box;
-   min-height: 600px;
-   min-width: 100px;
- }
- .pie-contacto{
+ #pie-contacto{
    width: 25%;
    order: 1;
    position: relative;
    left: 5%;
  }
- .pie-contacto a{
+ #pie-contacto a{
    color: black;
  }
- .pie-terminos{
+ #pie-terminos{
    width: 25%;
    order: 2;
    position: relative;
    left: 5%;
  }
- .pie-derechos{
+ #pie-derechos{
    width: 20%;
    order: 4;
    position: relative;
    left: 0%;
  }
- .pie-redes{
+ #pie-redes{
    width: 30%;
    order: 3;
    position: relative;
    left: 5%;
  }
- .pie-redes img{
+ #pie-redes img{
    width: 100%;
  }
- .pie-redes table{
+ #pie-redes table{
    width: 100%;
  }
  .redes{
    width: 10%;
  }
+ #ficon img{
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+ }
+@media screen and (max-width:900px){
+    #contenido{
+  		width: 100%;
+  		margin: 0 auto;
+  	}
+  	#encabezado{
+    	width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 0px;
+  	}
+    #encabezado h1{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0px 0px 0px;
+      text-align: center;
+    }
+    #contenido nav{
+      width: 100%;
+      display: block;
+    }
+    #contenido nav ul{
+      text-align: center;
+      margin: 0 auto;
+      padding: 0px 0px 15px 0px;
+  	}
+  	#contenedor1{
+      width: 100%;
+    }
+    #contenedor1 img{
+      width: 80%
+    }
+    #contenedor2{
+      width: 100%;
+      display: block;
+    }
+    #paisajes{
+  	   width:80%;
+       margin: 0 auto;
+  	}
+    #retratos{
+    	width:80%;
+      margin: 0 auto;
+  	 }
+     #contenedor3{
+       width: 100%;
+     }
+    #contenedor3 #pie-contacto{
+      width:100%;
+      margin: 0 auto;
+      left: 10%;
+    }
+    #contenedor3 #pie-terminos{
+      width:100%;
+      left: 10%;
+    }
+    #contenedor3 #pie-redes{
+      width:100%;
+      left: 10%;
+    }
+    #contenedor3 #pie-derechos{
+      width:100%;
+      left: 10%;
+    }
+    .redes{
+      width: 5%;
+    }
+}
